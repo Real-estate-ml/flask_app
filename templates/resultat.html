@@ -3,14 +3,22 @@
 
 {% block content %}
 <br>
-&nbsp;&nbsp;&nbsp;Estimation :
 <br>
-<br>
-&nbsp;&nbsp;&nbsp;Votre surface est de {{surface}} m2,
-vous avez {{pieces}} pièces.
-Vous habitez dans le {{localisation}} arrondissement.
+<div class="alert alert-primary" role="alert">
+<p class="fw-bolder text-dark" >
 
-<br>
-<br>
-&nbsp;&nbsp;&nbsp;Le prix de votre appartement est de : 180 000 €
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Estimation du prix de votre bien:
+</p>
+
+<p class="text-dark">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Votre surface est de <span class="text-dark fw-bolder"> {{surface}} m2</span>,
+vous avez <span class="text-dark fw-bolder"> {{pieces}} pièces</span> .
+Vous habitez dans le <span class="text-dark fw-bolder"> {{localisation}} ème</span> arrondissement.
+</p>
+
+<p class="text-dark">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Le prix de votre appartement est de :<span class="text-dark fw-bolder"> {{price}} €</span>
+</p>
+</div>
 {% endblock %}

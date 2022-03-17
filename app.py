@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+from connect_gcs import get_prediction
 
 app = Flask(__name__)
 
@@ -16,7 +17,7 @@ def resultat():
     surface = result['surface']
     localisation = result['localisation']
     pieces = result['pieces']
-    return render_template("resultat.html", surface=surface, localisation=localisation, pieces=pieces)
+    return render_template("resultat.html", surface=surface, localisation=localisation, pieces=pieces, price=get_prediction(int(pieces), int(surface), int(localisation)))
 
 @app.route('/ourservice')
 def ourservice():
